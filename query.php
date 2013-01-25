@@ -28,9 +28,9 @@
       } else {
 
 
-          $employee = $_POST['employee'];
-          $start_date = $_POST['start-date'];
-          $end_date = $_POST['end-date'];
+        $employee = $_POST['employee'];
+        $start_date = $_POST['start-date'];
+        $end_date = $_POST['end-date'];
 
 
         // parsing start_date and end-date format
@@ -47,9 +47,9 @@
 
         } else {
 
-          $query = "SELECT user_id, late, total_hours_work, date  FROM bio_dtr 
-              WHERE user_id='$employee' AND date BETWEEN '" . $start_date . "' AND '" . $end_date . "' 
-              ORDER BY  date DESC";
+          $query = "SELECT *  FROM bio_dtr 
+              WHERE user_id= '" . $employee . "' 
+              AND (date BETWEEN '" . $start_date . "' AND '" . $end_date . "')";
           $result = mysql_query($query);
           if (!$result) {
             die('Mysql query failed! ' . mysql_error());
@@ -150,7 +150,7 @@
           <div class="control-group">
             <label for="startDate" class="control-label">Start Date</label>
             <div class="controls">
-              <input type="text" class="datepicker" name="start-date" value="<?php echo $_POST['start-date']; ?>"  placeholder="Start Date" />
+              <input type="text" id="start_date" class="datepicker" name="start-date" value="<?php echo $_POST['start-date']; ?>"  placeholder="Start Date" />
             </div>
           </div>
 
@@ -158,14 +158,14 @@
           <div class="control-group">
             <label for="endDate" class="control-label">End Date</label>
             <div class="controls">
-              <input type="text" class="datepicker" name="end-date" value="<?php echo $_POST['end-date']; ?>"  placeholder="End Date" />
+              <input type="text" id="end_date" class="datepicker" name="end-date" value="<?php echo $_POST['end-date']; ?>"  placeholder="End Date" />
             </div>
           </div>
 
           <!-- control group for submit -->
           <div class="control-group">
             <div class="controls">
-              <input type="submit" value="Submit" name="submit" class="btn btn-primary" />
+              <input type="submit" value="Submit" name="submit" class="btn btn-primary" id="submit_btn" />
             </div>
           </div>
 

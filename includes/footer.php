@@ -24,6 +24,7 @@
     <script src="js/bootstrap-typeahead.js"></script>
     <script src="js/bootstrap-affix.js"></script>
     <script src="js/application.js"></script>
+    <script src="js/ajax.js"></script>
 
 
     <!-- datepicker UI -->
