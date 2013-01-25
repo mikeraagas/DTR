@@ -35,7 +35,8 @@
             changeMonth: true,
             changeYear: true,
             showAnim: 'drop',
-            dateFormat: 'yy-mm-dd'
+            dateFormat: 'yy-mm-dd',
+            yearRange: '2009:2013'
         });
         $("#errorMessage").fadeIn();
     });
