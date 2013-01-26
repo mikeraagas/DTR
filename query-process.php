@@ -17,7 +17,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="span9">
+    <div class="span8">
 
       <?php 
       
@@ -37,7 +37,7 @@
             $message = "All fields are required";
           } else {
       
-            // Validate form for required fields
+            // check for valid employee name 
             if (! (isset($_POST['employee']) && array_key_exists($_POST['employee'], $employees) )) {
               $message = "Must Select a valid employee";
             } else {
@@ -73,6 +73,7 @@
                   $message = "No rows returned";
                 } else {
       
+                  // succes fetching rows
                   echo "<table class='table table-striped table-bordered'>";
                   echo "<tr>
                           <th>User id</th>
@@ -80,6 +81,7 @@
                           <th>Total Hours of work</th>
                           <th>Date</th>
                         </tr>";
+                        
                   // Fetch row until the last one
                   while ($rows = mysql_fetch_array($result)) {
                     // Print out the contents of each row into a table
@@ -96,16 +98,22 @@
                   echo "</table>";
       
                 }
-      
-                // echo "query submitted!";
               }
-      
             }
           }
        ?>
 
      </div> <!-- end of span9 -->
-     <div class="span3"></div>
+     <div class="span4">
+      <h3>DTR Report of  </h3>
+       
+        <?php 
+
+          // Display evaluation of fetched values
+
+         ?>
+
+     </div>
   </div> <!-- end of row -->
  </div> <!-- end of container -->
 
