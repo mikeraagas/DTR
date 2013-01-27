@@ -7,7 +7,6 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="js/jquery-1.9.0.js"></script>
     <script src="js/google-code-prettify/prettify.js"></script>
     <script src="js/bootstrap-transition.js"></script>

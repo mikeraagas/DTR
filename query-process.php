@@ -1,5 +1,6 @@
 <?php require_once 'includes/session.php' ?>
 <?php require_once 'includes/connection.php' ?>
+<?php require_once 'includes/functions.php' ?>
 <?php confirm_logged_in(); ?>
 
 <?php include 'includes/header.php'; ?>
@@ -105,7 +106,7 @@
 
      </div> <!-- end of span9 -->
      <div class="span4">
-      <h3>DTR Report of  </h3>
+      <h3>DTR Report of  <?php echo get_employee_name($_POST['employee']); ?></h3>
        
         <?php 
 
