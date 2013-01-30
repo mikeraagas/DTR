@@ -27,5 +27,20 @@
 		return $name;
 	}
 
+	function day_to_time($date) {
+		$timestamp = strtotime($date);
+
+		$day = date('l', $timestamp);
+		return $day;
+	}
+
+	function seperate_time($in_out) {
+		$timestamp = strtotime($in_out);
+
+		// $date = date('n.j.Y', $timestamp);
+		$time = date('H:i:s', $timestamp);
+
+		return $time;
+	}
 
  ?>
